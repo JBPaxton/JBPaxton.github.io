@@ -1,0 +1,210 @@
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
+
+a:link {
+    color: green; /*#e36c09;*/
+    /*text-shadow:1px 1px black;*/
+}
+
+/* visited link */
+a:visited {
+    color: green; /*#e36c09;*/
+}
+
+/* mouse over link */
+a:hover {                                                                                                                                                                                                                                                                                                                                                                                                                               
+    color: green; /*#e36c09;*/
+    text-decoration:underline;
+}
+
+/* selected link */                                                                                                 
+a:active {
+    color: green; /*#e36c09;*/
+}
+
+body {
+    font-family:Calibri, Arial, sans-serif;
+    font-size:18px; /*was 16px*/
+    line-height:1.4;
+    color:#444444; /*#12471C;*/
+}
+
+.breadcrumb {
+    background-color:transparent;
+    margin-bottom:0px;
+}
+
+.breadcrumb > li + li:before {
+    color: #888;
+    content: "> ";
+}
+
+/*.carousel-inner > .item > a > img, .carousel-inner > .item > img  {
+    max-width:115%;
+}*/
+
+.btn.focus, .btn:focus, .btn:visited, .btn:hover, .btn:active {
+    color:#444444;
+    background-color:rgba(194, 214, 155, 1.0);
+    border-color:rgba(194, 214, 155, 1.0);
+}
+.btn-info {
+    color:#444444;
+    background-color:rgba(194, 214, 155, 1.0);
+    border-color:rgba(194, 214, 155, 1.0);
+}
+
+.btn-info.focus, .btn-info:focus, btn-info:visited, btn-info:hover, btn-info:active {
+    color:#444444;
+    background-color:rgba(194, 214, 155, 1.0);
+    border-color:rgba(194, 214, 155, 1.0);
+}
+
+.caption {
+    text-align:center;
+}
+
+.contact-form-label {
+    float:left; 
+    text-align:right; 
+    width:50%; 
+    padding:4px;
+}
+
+.contact-form-input {
+    float:left; 
+    width:50%; 
+    padding:4px;
+}
+
+.container {
+    background-color:rgba(255, 255, 255, 0.80);
+}
+
+   @font-face {
+    font-family: 'uppereastside';
+    src: url('/web/20220502081038im_/http://watersupton.org.uk/fonts/uppereastside.woff') format('woff');
+}
+
+.councilPersonPortrait>.col-md-5, .councilPersonPortrait>.col-md-7 {
+    padding-left:4px;
+    padding-right:4px;
+}
+
+.dropdown-menu {
+    font-size:1.2em;
+    border:1px solid rgba(194, 214, 155, 1.0);
+}
+
+.dropdown-menu > li > a {
+    color:#444444;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
+    color:#444444;
+    background-color:rgba(194, 214, 155, 1.0)
+
+}
+
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+    color:#444444;
+    background-color:rgba(194, 214, 155, 1.0);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin:0;
+    padding:0 0 .2em 0;
+}
+
+img {
+	max-width:100%;
+	height:auto;
+}
+
+.nav > li > a {
+    padding: 8px;
+    font-size:1.2em;
+}
+
+.navbar {
+    min-height:32px;
+}
+
+.navbar-default {
+    background-color:transparent;
+    border:none;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color:#444444;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color:#444444;
+    background-color:rgba(194, 214, 155, 1.0);
+}
+
+.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:hover {
+    color:#444444;
+    background-color:rgba(194, 214, 155, 1.0);
+}
+
+/* Document list formatting */
+.docList-alternating-row
+    {
+        background-color: #EEEEEE;
+    }
+
+.docList-footer {
+    background-color: rgba(194, 214, 155, 1.0);
+}
+.docList-header {
+    background-color:rgba(194, 214, 155, 1.0)
+}
+
+.docList-table {
+    width: 100%;
+}
+
+.docList-table td, th {
+    border: 1px solid gray;
+    padding: 4px;
+}
+
+/*Panels*/
+
+.panel-default {
+    border-color: rgba(194, 214, 155, 1.0);
+}
+.panel-default > .panel-heading {
+    color: #444444;
+    background-color: rgba(194, 214, 155, 1.0);
+
+}
+
+textarea.form-control {
+    height:100px;
+}
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
+
+/*
+     FILE ARCHIVED ON 08:10:38 May 02, 2022 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 10:58:27 Dec 31, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 353.431
+  exclusion.robots: 0.068
+  exclusion.robots.policy: 0.059
+  cdx.remote: 0.051
+  esindex: 0.008
+  LoadShardBlock: 318.964 (3)
+  PetaboxLoader3.resolve: 241.774 (5)
+  PetaboxLoader3.datanode: 202.706 (6)
+  load_resource: 162.128 (2)
+  loaddict: 51.838
+*/
