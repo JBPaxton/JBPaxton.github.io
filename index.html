@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <!-- saved from url=(0072)https://web.archive.org/web/20220818140749id_/http://watersupton.org.uk/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -272,14 +272,15 @@
 
     
         <div style="height:20px"></div>
-    
 
 
-                            
-    
+
+
+                    
+
 <h2><span class="greenText">Vacancy</span></h2>
 <p>The Parish Council is looking for an enthusiastic and interested person who is willing to make the necessary commitment in terms of time and effort and feel that they can be part of our team.</p>
-<p>The full Notice of Vacancy can be downloaded <a href="https://web.archive.org/media/25206/notice-of-vacancy-oct-2021.pdf" title="Notice of Vacancy - Oct 2021.pdf">here</a>.</p>
+<p>The full Notice of Vacancy can be downloaded <a href="./files/notice-of-vacancy-oct-2021.pdf" title="Notice of Vacancy - Oct 2021.pdf">here</a>.</p>
 <p>If you would like further information regarding the role, please contact the Clerk on 01952 541939 or email clerk.watersupton@parishcouncil.work.</p>
 
 
@@ -287,12 +288,13 @@
     
 
     
-        <div style="height:20px"></div>
+<div style="height:20px"></div>
     
 
 
                             
     
+
 <h3><span class="greenText">The MyTelford App</span></h3>
 <p>Telford &amp; Wrekin Council have launched a brand new app for residents to access council services quickly and easily through a streamlined system.</p>
 <p>The MyTelford app is free to download application for Android and iOS that offers residents a range of different services. For more information and download links, please click <a href="https://newsroom.telford.gov.uk/News/Details/15949">here</a>.</p>
@@ -463,72 +465,15 @@
 </div>
 
 <script type="text/javascript">
-    var onloadCallback = function () {
-        var allElements = document.getElementsByTagName("*");
-        var allIds = [];
-        var vRecaptchaId;
-        for (var i = 0, n = allElements.length; i < n; ++i) {
-            var el = allElements[i];
-           if (el.id) {
-                if (el.id.indexOf('Recaptcha') == 0) {
-                    vRecaptchaId = grecaptcha.render(el.id, { 'sitekey': '', 'size': 'compact' });
-                    var vButtonId =  el.id.replace('Recaptcha', '');
-                    $("#" + vButtonId + "").attr("RecaptchaId", vRecaptchaId);
-               }
-            }
-            if (el.tagName == "textarea") {
-                alert(el.tagName);
-            }
 
-        }
-
-    };
 
     $('#c86f96bd-522a-428c-b498-9350fb36c910').click(function () {
-        var url = "/umbraco/surface/ContactFormSurface/HandleFormSubmit/";
         var vName = $.trim($("#1cdb6b76-a5aa-4ff1-9a53-2d4e09c7363a").val());
         var vEmail = $.trim($("#3bea72ff-6e20-4104-a214-d6a525bf8388").val());
         var vMessage = $.trim($("#0cfd5738-fb45-465b-861a-563da24402d7").val());
-        var vDomainName = $.trim($("#e9727678-7e8f-43e6-9512-80a61737b959").val());
-        var vReceivingEmail = $.trim($("#35cade9d-e090-4602-b10e-4d4b38208d4f").val());
-        var vTitle = $.trim($("#fd7a1800-9eb1-4235-9c88-ea6cade05181").val());
-        var vGrecaptcha = "";
-        if ($("#e3f4f389-23be-4ab7-9b49-af62f4292357").val() == "")
-        {
-            vGrecaptcha = "";
-        }
-        else
-        {
-            vGrecaptcha = grecaptcha.getResponse($("#c86f96bd-522a-428c-b498-9350fb36c910").attr("RecaptchaId"));
-        }
-                     //alert("Click OK");
-        $.post(url, {
-            Name: vName,
-            Email: vEmail,
-            Message: vMessage,
-            ReceivingEmail: vReceivingEmail,
-            DomainName: vDomainName,
-            Title: vTitle,
-            recaptcha: vGrecaptcha
-        }, function (data) {
-            switch (data) {
-                case "0":
-                    $("#0ba83af1-5e8e-454e-85b8-d82f079e36d5").text("Please complete all the fields.");
-                    break;
-                case "1":
-                    $("#0ba83af1-5e8e-454e-85b8-d82f079e36d5").text("Invalid email address.");
-                    break;
-                case "2":
-                    $("#0ba83af1-5e8e-454e-85b8-d82f079e36d5").text("Invalid Captcha response.  Did you check 'I'm not a robot'?");
-                    break;
-                case "3":
-                   $('#1cdb6b76-a5aa-4ff1-9a53-2d4e09c7363a').val("");
-                    $('#3bea72ff-6e20-4104-a214-d6a525bf8388').val("");
-                    $('#0cfd5738-fb45-465b-861a-563da24402d7').val("");
-                    $("#0ba83af1-5e8e-454e-85b8-d82f079e36d5").text("Thank you for your message.  We'll be in touch.");
-                    break;
-            }
-        });
+        var vTitle = `Message from ${vName}`
+        var vReceivingEmail = "clerk.watersupton@parishcouncil.work"
+        location.href = `mailto:${vReceivingEmail}?subject=${encodeURIComponent(vTitle)}&body=From:%20${encodeURIComponent(vName)}%20(${encodeURIComponent(vEmail)})%0A%0A${encodeURIComponent(vMessage)}`;
     })
 </script>
     
@@ -603,72 +548,14 @@
 </div>
 
 <script type="text/javascript">
-    var onloadCallback = function () {
-        var allElements = document.getElementsByTagName("*");
-        var allIds = [];
-        var vRecaptchaId;
-        for (var i = 0, n = allElements.length; i < n; ++i) {
-            var el = allElements[i];
-           if (el.id) {
-                if (el.id.indexOf('Recaptcha') == 0) {
-                    vRecaptchaId = grecaptcha.render(el.id, { 'sitekey': '', 'size': 'compact' });
-                    var vButtonId =  el.id.replace('Recaptcha', '');
-                    $("#" + vButtonId + "").attr("RecaptchaId", vRecaptchaId);
-               }
-            }
-            if (el.tagName == "textarea") {
-                alert(el.tagName);
-            }
 
-        }
-
-    };
-
-    $('#898f4a4e-d94d-4e72-b7d6-b812c415074e').click(function () {
-        var url = "/umbraco/surface/ContactFormSurface/HandleFormSubmit/";
+$('#898f4a4e-d94d-4e72-b7d6-b812c415074e').click(function () {
         var vName = $.trim($("#156d7636-3bf0-4616-81fc-2a4b09f7f9a6").val());
         var vEmail = $.trim($("#7b189f68-8364-43ab-bbe6-42db18c80f6a").val());
         var vMessage = $.trim($("#828329f7-7ca9-4859-a6de-aa5e648370f1").val());
-        var vDomainName = $.trim($("#711dd18d-6b80-4625-b433-4c43a44e38dc").val());
-        var vReceivingEmail = $.trim($("#5b69952a-ca9a-4dfe-93da-b8792ea41722").val());
-        var vTitle = $.trim($("#f94c283d-fa2d-4f49-8889-e6cdaa1720db").val());
-        var vGrecaptcha = "";
-        if ($("#488b4ce3-2c95-4549-b0f9-039104901e6a").val() == "")
-        {
-            vGrecaptcha = "";
-        }
-        else
-        {
-            vGrecaptcha = grecaptcha.getResponse($("#898f4a4e-d94d-4e72-b7d6-b812c415074e").attr("RecaptchaId"));
-        }
-                     //alert("Click OK");
-        $.post(url, {
-            Name: vName,
-            Email: vEmail,
-            Message: vMessage,
-            ReceivingEmail: vReceivingEmail,
-            DomainName: vDomainName,
-            Title: vTitle,
-            recaptcha: vGrecaptcha
-        }, function (data) {
-            switch (data) {
-                case "0":
-                    $("#aa471b40-0856-455c-832d-5a705edc2cef").text("Please complete all the fields.");
-                    break;
-                case "1":
-                    $("#aa471b40-0856-455c-832d-5a705edc2cef").text("Invalid email address.");
-                    break;
-                case "2":
-                    $("#aa471b40-0856-455c-832d-5a705edc2cef").text("Invalid Captcha response.  Did you check 'I'm not a robot'?");
-                    break;
-                case "3":
-                   $('#156d7636-3bf0-4616-81fc-2a4b09f7f9a6').val("");
-                    $('#7b189f68-8364-43ab-bbe6-42db18c80f6a').val("");
-                    $('#828329f7-7ca9-4859-a6de-aa5e648370f1').val("");
-                    $("#aa471b40-0856-455c-832d-5a705edc2cef").text("Thank you for your message.  We'll be in touch.");
-                    break;
-            }
-        });
+        var vTitle = `Message from ${vName}`
+        var vReceivingEmail = "clerk.watersupton@parishcouncil.work"
+        location.href = `mailto:${vReceivingEmail}?subject=${encodeURIComponent(vTitle)}&body=From:%20${encodeURIComponent(vName)}%20(${encodeURIComponent(vEmail)})%0A%0A${encodeURIComponent(vMessage)}`;
     })
 </script>
     

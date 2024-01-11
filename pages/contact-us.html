@@ -225,73 +225,16 @@
 </div>
 
 <script type="text/javascript">
-    var onloadCallback = function () {
-        var allElements = document.getElementsByTagName("*");
-        var allIds = [];
-        var vRecaptchaId;
-        for (var i = 0, n = allElements.length; i < n; ++i) {
-            var el = allElements[i];
-           if (el.id) {
-                if (el.id.indexOf('Recaptcha') == 0) {
-                    vRecaptchaId = grecaptcha.render(el.id, { 'sitekey': '', 'size': 'compact' });
-                    var vButtonId =  el.id.replace('Recaptcha', '');
-                    $("#" + vButtonId + "").attr("RecaptchaId", vRecaptchaId);
-               }
-            }
-            if (el.tagName == "textarea") {
-                alert(el.tagName);
-            }
-
-        }
-
-    };
 
     $('#9925dcc0-8de7-468e-96a7-1f3ad4325551').click(function () {
-        var url = "/umbraco/surface/ContactFormSurface/HandleFormSubmit/";
         var vName = $.trim($("#606a1b60-e893-4691-a8b7-f8491e9f3d37").val());
         var vEmail = $.trim($("#101d29bc-e595-496c-bb8e-2b4e83080c45").val());
         var vMessage = $.trim($("#9bc3f653-ec2e-4030-a0db-d13ae6d1c64a").val());
-        var vDomainName = $.trim($("#68007bd5-b594-405e-ba14-d5a6c32dd5e1").val());
-        var vReceivingEmail = $.trim($("#89fce14a-d93c-4444-ae3c-c153970e9bc6").val());
-        var vTitle = $.trim($("#3e495d49-c404-466e-94d5-5795bc55d26e").val());
-        var vGrecaptcha = "";
-        if ($("#9b7f4bbc-fdfe-4418-a4b7-f829e9f311a8").val() == "")
-        {
-            vGrecaptcha = "";
-        }
-        else
-        {
-            vGrecaptcha = grecaptcha.getResponse($("#9925dcc0-8de7-468e-96a7-1f3ad4325551").attr("RecaptchaId"));
-        }
-                     //alert("Click OK");
-        $.post(url, {
-            Name: vName,
-            Email: vEmail,
-            Message: vMessage,
-            ReceivingEmail: vReceivingEmail,
-            DomainName: vDomainName,
-            Title: vTitle,
-            recaptcha: vGrecaptcha
-        }, function (data) {
-            switch (data) {
-                case "0":
-                    $("#7603a24d-7df7-4d0d-a76b-978ed71e9b0f").text("Please complete all the fields.");
-                    break;
-                case "1":
-                    $("#7603a24d-7df7-4d0d-a76b-978ed71e9b0f").text("Invalid email address.");
-                    break;
-                case "2":
-                    $("#7603a24d-7df7-4d0d-a76b-978ed71e9b0f").text("Invalid Captcha response.  Did you check 'I'm not a robot'?");
-                    break;
-                case "3":
-                   $('#606a1b60-e893-4691-a8b7-f8491e9f3d37').val("");
-                    $('#101d29bc-e595-496c-bb8e-2b4e83080c45').val("");
-                    $('#9bc3f653-ec2e-4030-a0db-d13ae6d1c64a').val("");
-                    $("#7603a24d-7df7-4d0d-a76b-978ed71e9b0f").text("Thank you for your message.  We'll be in touch.");
-                    break;
-            }
-        });
+        var vTitle = `Message from ${vName}`
+        var vReceivingEmail = "clerk.watersupton@parishcouncil.work"
+        location.href = `mailto:${vReceivingEmail}?subject=${encodeURIComponent(vTitle)}&body=From:%20${encodeURIComponent(vName)}%20(${encodeURIComponent(vEmail)})%0A%0A${encodeURIComponent(vMessage)}`;
     })
+
 </script>
     
 
